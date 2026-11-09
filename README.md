@@ -1,5 +1,5 @@
 # CallusDetect-XAI
-### An Explainable Deep Learning Framework for Automated Callus Detection and Quality Assessment in *Phyllostachys pubescens*
+### An explainable deep learning framework for automated callus detection and quality assessment in *Phyllostachys pubescens*
 
 <p align="center">
   <strong>Explainable Artificial Intelligence | Deep Learning | Plant Tissue Culture | Callus Assessment</strong>
