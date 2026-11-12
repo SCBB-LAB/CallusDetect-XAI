@@ -136,17 +136,20 @@ Images were collected across different plant growth regulator, temperature, and 
 ```
 CallusDetect-XAI/
 ├── model/
-│   ├── yolo_calldetect.pt              # YOLO detection model weights
-│   └── best_model_early_stopping.pth  # DenseNet161 Grad-CAM model weights
-├── data/
-│   ├── your_image.jpg                  # Source images or videos
-│   └── runs/                           # YOLO detection output (auto-created)
-│       └── predict/
-│           ├── your_image.jpg          # Annotated image with bounding boxes
-│           └── labels/
-│               └── your_image.txt     # Detections: class x y w h confidence
-├── gradcam_program.py                  # Grad-CAM & Grad-CAM++ visualization script
-├── sample.png                          # Sample reference image
+│   ├── yolo_calldetect.pt                   # YOLO detection model weights
+│   └── best_model_early_stopping.pth        # DenseNet161 Grad-CAM model weights
+├── CallDetect/
+│   └── output/
+│       └── sample_batch/                    # One folder per detection batch
+│           ├── 1794200189446_sample.jpeg    # Input image
+│           ├── file.png                     # Grad-CAM output heatmap
+│           └── runs/                        # YOLO detection output (auto-created)
+│               └── predict/
+│                   ├── 1794200189446_sample.jpeg   # Annotated image with bounding boxes
+│                   └── labels/
+│                       └── 1794200189446_sample.txt # Detections: class x y w h confidence
+├── gradcam_program.py                       # Grad-CAM & Grad-CAM++ visualization script
+├── sample.png                               # Sample reference image
 └── README.md
 ```
 
@@ -229,39 +232,23 @@ Generates **Grad-CAM** and **Grad-CAM++** heatmaps for a single image using the 
 
 ```bash
 python3 gradcam_program.py \
-  CallDetect/output/$1/$2 \
-  CallDetect/output/$1/file.png
+  CallDetect/output/sample_batch/1794200189446_sample.jpeg \
+  CallDetect/output/sample_batch/file.png
 ```
 
-#### Shell Variables
+#### Arguments
 
-| Variable | Role     | Description                                              |
-|----------|----------|----------------------------------------------------------|
-| `$1`     | Session  | Subfolder name under `output/` — groups results per run  |
-| `$2`     | Filename | The specific image file to analyze (e.g. `image.jpg`)   |
-
-#### Resolved Paths Example
-
-If called as `./run.sh job_001 sample.jpg`:
-
-| Path Type    | Resolved Path                                        |
-|--------------|------------------------------------------------------|
-| Input image  | `CallDetect/output/job_001/sample.jpg` |
-| Output PNG   | `CallDetect/output/job_001/file.png`   |
-
-#### Script Arguments
-
-| Position      | Example Value                                            | Description                           |
-|---------------|----------------------------------------------------------|---------------------------------------|
-| `sys.argv[1]` | `CallDetect/output/job_001/sample.jpg`     | Path to the input image               |
-| `sys.argv[2]` | `CallDetect/output/job_001/file.png`       | Path to save the output heatmap image |
+| Position      | Example Value                                              | Description                           |
+|---------------|------------------------------------------------------------|---------------------------------------|
+| `sys.argv[1]` | `CallDetect/output/sample_batch/1794200189446_sample.jpeg` | Path to the input image               |
+| `sys.argv[2]` | `CallDetect/output/sample_batch/file.png`                  | Path to save the output heatmap image |
 
 #### Grad-CAM Output
 
 The script saves a side-by-side PNG with two heatmap panels:
 
 ```
-output/$1/
+CallDetect/output/sample_batch/
 └── file.png    ← Side-by-side Grad-CAM | Grad-CAM++ heatmap (300 DPI)
 ```
 
@@ -302,7 +289,7 @@ Both methods operate on the last convolutional layer of the DenseNet161 model an
 
 - Ensure the `data/` folder exists and contains valid image or video files before running YOLO.
 - The `data/runs/` output directory is created automatically by YOLO.
-- The output folder `CallDetect/output/$1/` must exist before running `gradcam_program.py`.
+- The output folder `CallDetect/output/<batch_name>/` must exist before running `gradcam_program.py`.
 - Supported source formats: `.jpg`, `.png`, `.mp4`, `.avi`, and more.
 - Grad-CAM requires a CUDA-capable GPU (`cuda:1`) or will automatically fall back to CPU.
 
@@ -314,6 +301,12 @@ If you use CallusDetect-XAI in your research, please cite the associated publica
 
 ---
 
-## 14. Repository
+## 14. License
+
+This project is for internal/research use. Please refer to your organization's licensing terms.
+
+---
+
+## 15. Repository
 
 GitHub: [https://github.com/SCBB-LAB/CallusDetect-XAI](https://github.com/SCBB-LAB/CallusDetect-XAI)
