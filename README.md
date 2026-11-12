@@ -303,8 +303,7 @@ If you use CallusDetect-XAI in your research, please cite the associated publica
 
 ## 14. License
 
-This project is for internal/research use. Please refer to your organization's licensing terms.
-
+This project is for internal/research use (CC BY-NC 4.0).
 ---
 
 ## 15. Repository
