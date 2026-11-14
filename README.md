@@ -12,7 +12,7 @@
 
 **CallusDetect-XAI** is an explainable deep learning-based framework for the automated detection and quality assessment of callus tissues in *Phyllostachys pubescens* (Moso bamboo).
 
-Conventional callus assessment in plant tissue culture primarily relies on manual visual examination by experienced researchers — a process that is subjective, time-consuming, and difficult to standardize. CallusDetect-XAI addresses these limitations by integrating an optimized YOLO11-based architecture with explainable AI (XAI) techniques to provide rapid, objective, and interpretable callus assessment.
+Conventional callus assessment in plant tissue culture primarily relies on manual visual examination by experienced researchers - a process that is subjective, time-consuming, and difficult to standardize. CallusDetect-XAI addresses these limitations by integrating an optimized YOLO11-based architecture with explainable AI (XAI) techniques to provide rapid, objective, and interpretable callus assessment.
 
 The framework incorporates architectural optimization, automated hyperparameter tuning (Optuna), and gradient-based visual explanation techniques (Grad-CAM / Grad-CAM++) to improve classification performance while providing insights into the morphological regions influencing model predictions.
 
@@ -20,13 +20,13 @@ The framework incorporates architectural optimization, automated hyperparameter 
 
 ## 2. Key Features
 
-- **Automated Callus Assessment** — Deep learning-based identification of optimal and non-optimal callus tissues.
-- **YOLO11 Architecture** — Optimized YOLO11-based framework for callus image analysis.
-- **Architectural Enhancements** — Integration of C2PSA and C3K2 modules to improve feature extraction.
-- **Hyperparameter Optimization** — Optuna-based tuning for improved model performance.
-- **Explainable AI** — Grad-CAM and Grad-CAM++ for visual interpretation of model predictions.
-- **Morphological Assessment** — Identification of visual characteristics associated with callus quality.
-- **Rapid Image Analysis** — Automated assessment supporting high-throughput tissue culture screening.
+- **Automated Callus Assessment** - Deep learning-based identification of optimal and non-optimal callus tissues.
+- **YOLO11 Architecture** - Optimized YOLO11-based framework for callus image analysis.
+- **Architectural Enhancements** - Integration of C2PSA and C3K2 modules to improve feature extraction.
+- **Hyperparameter Optimization** - Optuna-based tuning for improved model performance.
+- **Explainable AI** - Grad-CAM and Grad-CAM++ for visual interpretation of model predictions.
+- **Morphological Assessment** - Identification of visual characteristics associated with callus quality.
+- **Rapid Image Analysis** - Automated assessment supporting high-throughput tissue culture screening.
 
 ---
 
@@ -34,10 +34,10 @@ The framework incorporates architectural optimization, automated hyperparameter 
 
 The CallusDetect-XAI pipeline has four major components:
 
-1. **Image Acquisition** — Callus images collected under controlled laboratory conditions.
-2. **Deep Learning Model** — Feature extraction and classification using an optimized YOLO11 architecture with C2PSA and C3K2 modules.
-3. **Hyperparameter Optimization** — Optuna-based optimization of training parameters.
-4. **Explainable AI** — Grad-CAM and Grad-CAM++ visualization to interpret prediction-relevant regions.
+1. **Image Acquisition** - Callus images collected under controlled laboratory conditions.
+2. **Deep Learning Model** - Feature extraction and classification using an optimized YOLO11 architecture with C2PSA and C3K2 modules.
+3. **Hyperparameter Optimization** - Optuna-based optimization of training parameters.
+4. **Explainable AI** - Grad-CAM and Grad-CAM++ visualization to interpret prediction-relevant regions.
 
 ### Workflow
 
@@ -180,7 +180,7 @@ yolo --version
 
 ## 9. Usage
 
-### Step 1 — YOLO Object Detection
+### Step 1 - YOLO Object Detection
 
 Runs detection on all images in the source folder and saves annotated results.
 
@@ -226,7 +226,7 @@ Example:
 
 ---
 
-### Step 2 — Grad-CAM Visualization
+### Step 2 - Grad-CAM Visualization
 
 Generates **Grad-CAM** and **Grad-CAM++** heatmaps for a single image using the DenseNet161 classification model.
 
