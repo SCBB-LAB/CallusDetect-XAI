@@ -136,8 +136,8 @@ Images were collected across different plant growth regulator, temperature, and 
 ```
 CallusDetect-XAI/
 ├── model/
-│   ├── yolo_calldetect.pt                   # YOLO detection model weights
-│   └── best_model_early_stopping.pth        # DenseNet161 Grad-CAM model weights
+│   ── best.pt                   # YOLO detection model weights
+│   
 ├── CallDetect/
 │   └── output/
 │       └── sample_batch/                    # One folder per detection batch
@@ -186,7 +186,7 @@ Runs detection on all images in the source folder and saves annotated results.
 
 ```bash
 yolo detect predict \
-  model=model/yolo_calldetect.pt \
+  model=model/best.pt \
   source=data \
   save=True \
   project=data/runs \
@@ -198,7 +198,7 @@ yolo detect predict \
 
 | Argument    | Value                      | Description                                               |
 |-------------|----------------------------|-----------------------------------------------------------|
-| `model`     | `model/yolo_calldetect.pt` | Path to the trained YOLO model weights                    |
+| `model`     | `model/best.pt` | Path to the trained YOLO model weights                    |
 | `source`    | `data`                     | Folder containing input images or videos                  |
 | `save`      | `True`                     | Save annotated output images with bounding boxes drawn    |
 | `project`   | `data/runs`                | Root directory where results will be saved                |
@@ -276,7 +276,7 @@ Both methods operate on the last convolutional layer of the DenseNet161 model an
 | Property         | Value                                               |
 |------------------|-----------------------------------------------------|
 | Architecture     | DenseNet161 (custom implementation)                 |
-| Model file       | `model/best_model_early_stopping.pth`               |
+| Model file       | `model/best.pth`               |
 | Input size       | 1000 × 1000 px                                      |
 | Output           | Binary classification (1 class)                     |
 | Growth rate      | 48                                                  |
