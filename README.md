@@ -4,7 +4,7 @@
 
 **Explainable Artificial Intelligence | Deep Learning | Plant Tissue Culture | Callus Assessment**
 
-![Sample](sample.png)
+![Sample](Figure.PNG)
 
 ---
 
