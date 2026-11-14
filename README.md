@@ -107,7 +107,7 @@ Callus samples are categorized into two classes based on observable morphologica
 
 ## 5. Dataset Description
 
-The dataset comprises experimentally acquired images of *Phyllostachys pubescens* callus tissues obtained under controlled laboratory conditions.
+The dataset comprises experimentally acquired images of *Phyllostachys pubescens* callus tissues obtained under controlled laboratory conditions. The link to the all the image data can be [find here](https://github.com/)
 
 | Property              | Detail                                                                 |
 |-----------------------|------------------------------------------------------------------------|
