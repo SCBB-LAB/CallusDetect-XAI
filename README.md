@@ -113,7 +113,7 @@ The dataset comprises experimentally acquired images of *Phyllostachys pubescens
 |-----------------------|------------------------------------------------------------------------|
 | Plant species         | *Phyllostachys pubescens* (Moso bamboo)                               |
 | Image acquisition     | Controlled laboratory setup using a Nikon camera                      |
-| Dataset size          | 1,920 quality-controlled images                                        |
+| Dataset size          | 3,840 quality-controlled images                                        |
 | Classes               | Optimal callus, Non-optimal callus                                     |
 | Annotations           | Based on observable callus morphological characteristics               |
 | Full dataset size     | ~49 GB (available via data repository upon publication)               |
